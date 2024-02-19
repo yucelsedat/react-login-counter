@@ -1,24 +1,20 @@
-import { useContext, useEffect, useReducer } from "react"
+import { useContext, useReducer,memo } from "react"
 import reducer from "../reducers/countReducer";
 import { UserContext } from "../contexts/userContext";
 
-
+ 
 
 const Counter = () => {
 
-    const nickname = useContext(UserContext)
+    console.log('Counter rendered')
 
+    const nickname = useContext(UserContext)
+    
+    
     const [state, dispatch] = useReducer(reducer, {
-        activeUser: null,
+        activeUser: nickname,
         count: 0
     })
-
-    useEffect(()=>{
-        dispatch({
-            type: 'USER',
-            value: nickname
-        })
-    },[])
 
     const artır = () => {
         dispatch({
@@ -68,4 +64,4 @@ const Counter = () => {
     )
 }
 
-export default Counter 
+export default memo(Counter)

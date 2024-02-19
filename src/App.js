@@ -8,6 +8,8 @@ import './tailwind.css'
 
 function App() {
 
+  console.log('APP rendered')
+
   const [auth , setAuth] = useState(false)
   const [activeUser , setActiveUser] = useState(false)
 

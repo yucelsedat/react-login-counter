@@ -1,8 +1,10 @@
 import { useState, useRef } from "react"
 
-
+ 
 
 const Login = ({setAuth, setActiveUser}) => {
+
+    console.log('Login rendered')
 
     const [message, setMessage] = useState('message')
 
@@ -13,7 +15,7 @@ const Login = ({setAuth, setActiveUser}) => {
     const handleLogin = (e) => {
         e.preventDefault()
         if (nicknameRef.current.value && passwordRef.current.value) {
-            console.log('tiklandi')
+            
             if(passwordRef.current.value === '123456') {
                 setActiveUser(nicknameRef.current.value)
                 setAuth(true) 
