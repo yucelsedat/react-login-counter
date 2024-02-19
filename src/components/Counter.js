@@ -1,4 +1,4 @@
-import { useContext, useReducer,memo } from "react"
+import { useContext, useReducer } from "react"
 import reducer from "../reducers/countReducer";
 import { UserContext } from "../contexts/userContext";
 
@@ -64,4 +64,4 @@ const Counter = () => {
     )
 }
 
-export default memo(Counter)
+export default Counter
