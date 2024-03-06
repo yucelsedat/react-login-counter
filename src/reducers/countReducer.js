@@ -7,12 +7,6 @@ const reducer = (state, action) => {
                 ...state,
                 count: action.value
             }
-
-        case ('USER'):
-            return {
-                ...state,
-                activeUser: action.value
-            }
         
         default:
             break;
